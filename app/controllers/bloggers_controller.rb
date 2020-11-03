@@ -23,4 +23,6 @@ class BloggersController < ApplicationController
         end
     end
 
+    
+
 end

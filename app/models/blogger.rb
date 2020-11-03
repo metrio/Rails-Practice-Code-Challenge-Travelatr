@@ -15,4 +15,7 @@ class Blogger < ApplicationRecord
         self.posts.max_by {|post| post.likes}
     end
     
+    def top_five
+        self.posts.max(5) {|post_a, post_b| post_a <=> post_b}.uniq
+    end 
 end
