@@ -6,7 +6,12 @@
 
 <p>Total Number of likes: <%=@blogger.all_likes %></p>
 
-<p>Featured Post: <%=@blogger.featured_post.title %></p>
+<p>Featured Post: 
+    <%if @blogger.featured_post != nil  %>
+    <%= link_to @blogger.featured_post.title, post_path %></p>
+    <% else  %>
+    <%= "No Current Posts"  %>
+    <% end%>
 
 <p>Top Destinations: </p>
 
