@@ -10,8 +10,8 @@
 
 <p>Top Destinations: </p>
 
-            <% @blogger.top_five.each do |post|%>
-            <li><%= post.destination.name%></li>
+            <% @blogger.top_five.each do |destination|%>
+            <li><%= destination.name%></li>
             <% end%>
 
 
